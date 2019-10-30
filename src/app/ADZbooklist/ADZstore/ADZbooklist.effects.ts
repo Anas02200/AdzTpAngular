@@ -23,12 +23,12 @@ export class ADZBookEffect {
               for (let key in resp["items"]) {
                 console.log(resp["items"][key].accessInfo);
                 let bookItem = new Book(
-                  resp["items"][key].accessInfo.webReaderLink,
+                  resp["items"][key].accessInfo.pdf.downloadLink||"Not available",
                   resp["items"][key].id,
                   resp["items"][key].saleInfo.saleability,
                   resp["items"][key].volumeInfo.authors,
                   resp["items"][key].volumeInfo.categories,
-                  resp["items"][key].volumeInfo.imageLinks.thumbnail,
+                  resp["items"][key].volumeInfo.imageLinks.thumbnail||"Not available",
                   resp["items"][key].volumeInfo.language,
                   resp["items"][key].volumeInfo.maturityRating,
                   resp["items"][key].volumeInfo.pageCount,

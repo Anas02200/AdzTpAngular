@@ -12,7 +12,6 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
   providedIn: "root"
 })
 export class ADZDataServiceService {
-  baseUrl = "https://www.googleapis.com/books/v1/volumes?q=";
 
   constructor(
 
@@ -35,9 +34,10 @@ export class ADZDataServiceService {
       language: data.language,
       maturityRating: data.maturityRating,
       pageCount: data.pageCount,
-      publishedDate: data.publishDate,
+      publishDate: data.publishDate,
       category: data.category,
-      authors: data.authors
+      authors: data.authors,
+      pdfLink:data.pdfLink
     };
 
     const dialogRef = this.dialog.open(ADZBookDetailsComponent, dialogConfig);

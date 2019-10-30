@@ -1,0 +1,26 @@
+<div>
+  <mat-form-field>
+    <mat-label>Filter By</mat-label>
+    <input [formControl]="Filterby"
+      matInput
+      type="text"
+      placeholder="Type something to search"
+
+    />
+    <mat-error *ngIf="Filterby.hasError('pattern')">
+        Only <strong>authors , category ,language </strong> Allowed
+      </mat-error>
+
+
+
+  </mat-form-field>
+
+<button mat-icon-button color="primary" (click)="ADZfilterBooks()"> Filter</button>
+
+<mat-form-field>
+    <mat-select [(value)]="filterbyThis" (click)="ADZUpdateBooks()" >
+        <mat-option *ngFor="let filter of filters " value={{filter}}>{{filter}}</mat-option>
+      </mat-select>
+</mat-form-field>
+
+</div>

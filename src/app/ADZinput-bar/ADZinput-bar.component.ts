@@ -26,7 +26,5 @@ export class ADZInputBarComponent implements OnInit {
     this.store.dispatch(new BooksActions.FetchBooks(this.value))
     this.router.navigateByUrl('/result');
   }
-  adzOnReturn(){
-    this.router.navigateByUrl('/');
-  }
+
 }

@@ -1,10 +1,14 @@
 <h1 mat-dialog-title>Hi {{data.title}}</h1>
 <div mat-dialog-content>
   <p>by : {{data.authors}}</p>
+  <p> Publie le : {{data.publishDate}}</p>
 <img mat-card-image src={{data.imageUrl}} alt={{data.title}}>
 
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="adzOnNoClick()">close</button>
+<p> Availability : {{data.saleInfo}}</p>
+<p>  Categorie: {{data.category}}</p>
+<p>  Langue: {{data.language}}</p>
+<p> Nombre de pages:{{data.pageCount}}</p>
+<p> Lien Pdf :{{data.pdfLink}}</p>
 
 </div>
+

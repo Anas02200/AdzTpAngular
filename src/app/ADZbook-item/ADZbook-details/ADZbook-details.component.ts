@@ -10,9 +10,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class ADZBookDetailsComponent implements OnInit {
 
-  constructor( public dialogRef: MatDialogRef<ADZBookDetailsComponent>,@Inject(MAT_DIALOG_DATA) public data: Book) { }
+  constructor( public dialogRef: MatDialogRef<ADZBookDetailsComponent>,@Inject(MAT_DIALOG_DATA) public data) { }
 
   ngOnInit() {
+    console.log(this.data)
   }
 
   adzOnNoClick(): void {
