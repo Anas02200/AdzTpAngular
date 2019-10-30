@@ -23,6 +23,7 @@ export class ADZInputBarComponent implements OnInit {
   }
 
   adzOnSearch() {
+    this.data.searchedValue=this.value;
     this.store.dispatch(new BooksActions.FetchBooks(this.value))
     this.router.navigateByUrl('/result');
   }

@@ -18,9 +18,11 @@
 <button mat-icon-button color="primary" (click)="ADZfilterBooks()"> Filter</button>
 
 <mat-form-field>
-    <mat-select [(value)]="filterbyThis" (click)="ADZUpdateBooks()" >
-        <mat-option *ngFor="let filter of filters " value={{filter}}>{{filter}}</mat-option>
+    <mat-select [(value)]="filterbyThis"  >
+        <mat-option *ngFor="let filter of filters " value={{filter}} (click)="ADZUpdateBooks()">{{filter}}</mat-option>
       </mat-select>
 </mat-form-field>
+
+<button mat-icon-button color="primary" (click)="ADZClearFilter()"> Clear Filters</button>
 
 </div>

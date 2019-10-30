@@ -13,6 +13,9 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 })
 export class ADZDataServiceService {
 
+
+  searchedValue;
+
   constructor(
 
 
