@@ -1,0 +1,37 @@
+<mat-grid-list cols="6" rowHeight="100px">
+  <mat-grid-tile colspan="1">
+    <button mat-icon-button color="primary" (click)="adzOnReturn()">
+      <mat-icon>arrow_back</mat-icon>
+      Return
+    </button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="1">
+    <h2>Search for your favourite books!!</h2>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="6" rowspan="1">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        placeholder="Type something to search"
+        [(ngModel)]="value"
+      />
+      <div matSuffix>
+        <button
+          *ngIf="value"
+          mat-icon-button
+          color="primary"
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" (click)="adzOnSearch()">
+          <mat-icon>search</mat-icon>
+          Search
+        </button>
+      </div>
+    </mat-form-field>
+  </mat-grid-tile>
+</mat-grid-list>
